@@ -52,8 +52,8 @@ class DonutTile extends StatelessWidget {
             // Imagen de la dona
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 5,
-                vertical: 3,
+                horizontal: 36,
+                vertical: 12,
               ),
               child: Image.asset(donutImagePath),
             ),
@@ -71,34 +71,37 @@ class DonutTile extends StatelessWidget {
             Text(
               donutProvider,
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.normal,
                 fontSize: 16
               ),
             ),
       
             // Botones
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // Favorito
-                Icon(
-                  Icons.favorite,
-                  color: Colors.pink[400]
-                ),
-      
-                // Agregar
-                TextButton(
-                  onPressed: (){},
-                  child: Text(
-                    'Add',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      decoration: TextDecoration.underline,
-                    ),
-                  )
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // Favorito
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.pink[400]
+                  ),
+                    
+                  // Agregar
+                  TextButton(
+                    onPressed: (){},
+                    child: Text(
+                      'Add',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        decoration: TextDecoration.underline,
+                      ),
+                    )
+                  ),
+                ],
+              ),
             )
       
           ],
